@@ -19,7 +19,7 @@ class StatusTest extends TestCase
      * @Description:    测试早上时间段状态
      * @DateTime   :    2021/9/29 11:33 下午
      */
-    public function test_morning()
+    public function test_morning_time()
     {
         $person = new Person("morning");
 
@@ -35,5 +35,16 @@ class StatusTest extends TestCase
         $person = new Person("work");
 
         $this->assertEquals("工作",$person->getStatus());
+    }
+
+    /**
+     * @Description:    测试下午
+     * @DateTime   :    2021/9/30 12:06 上午
+     */
+    public function test_afternoon_time()
+    {
+        $person = new Person("afternoon");
+
+        $this->assertEquals("下班",$person->getStatus());
     }
 }
