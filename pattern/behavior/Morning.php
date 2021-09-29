@@ -10,6 +10,10 @@ namespace App\behavior;
 
 use JetBrains\PhpStorm\Pure;
 
+/**
+ * @Class   Morning
+ * @package App\behavior
+ */
 class Morning implements StateInterface
 {
     /**
@@ -35,7 +39,6 @@ class Morning implements StateInterface
     #[Pure]
     public function getStatus(): string
     {
-
         if($this->person->getTimeSlot() == "morning"){
             return "上班";
         }

@@ -9,6 +9,10 @@ namespace App\behavior;
 
 use JetBrains\PhpStorm\Pure;
 
+/**
+ * @Class   IteratorTools
+ * @package App\behavior
+ */
 class IteratorTools implements \Iterator
 {
     /**

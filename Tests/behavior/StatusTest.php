@@ -47,4 +47,15 @@ class StatusTest extends TestCase
 
         $this->assertEquals("下班",$person->getStatus());
     }
+
+    /**
+     * @Description:    测试晚时间段状态
+     * @DateTime   :    2021/9/30 12:13 上午
+     */
+    public function test_night_time()
+    {
+        $person = new Person("night");
+
+        $this->assertEquals("睡觉",$person->getStatus());
+    }
 }
