@@ -11,7 +11,7 @@
 
     <testsuites>
         <testsuite name="behavior_type">
-            <directory>Tests/Iterator</directory>
+            <directory>Tests/behavior</directory>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>

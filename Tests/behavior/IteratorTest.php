@@ -5,9 +5,9 @@
  * @DateTime : 2021/9/29 6:20 下午
  */
 
-namespace Iterator;
+namespace behavior;
 
-use App\Iterator\IteratorTools;
+use App\behavior\IteratorTools;
 use PHPUnit\Framework\TestCase;
 
 /**
