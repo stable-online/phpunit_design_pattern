@@ -25,4 +25,15 @@ class StatusTest extends TestCase
 
         $this->assertEquals("上班",$person->getStatus());
     }
+
+    /**
+     * @Description:    测试工作时间
+     * @DateTime   :    2021/9/29 11:53 下午
+     */
+    public function test_work_time()
+    {
+        $person = new Person("work");
+
+        $this->assertEquals("工作",$person->getStatus());
+    }
 }

@@ -40,4 +40,12 @@ class Person
         $morning = new Morning($this);
         return $morning->getStatus();
     }
+
+    /**
+     * @return string
+     */
+    public function getTimeSlot(): string
+    {
+        return $this->timeSlot;
+    }
 }
