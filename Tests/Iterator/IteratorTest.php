@@ -18,7 +18,7 @@ use PHPUnit\Framework\TestCase;
 class IteratorTest extends TestCase
 {
     /**
-     * @Description:
+     * @Description:    迭代器模式
      * @DateTime   :    2021/9/29 6:21 下午
      */
     public function test_iterator()

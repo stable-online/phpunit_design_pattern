@@ -10,7 +10,7 @@
          stopOnFailure="false">
 
     <testsuites>
-        <testsuite name="pattern">
+        <testsuite name="behavior_type">
             <directory>Tests/Iterator</directory>
         </testsuite>
     </testsuites>
