@@ -6,6 +6,7 @@
 
 ## 11种行为型 (behavior type)
 * 迭代器模式 (iterator)
+* 状态模式 (status)
 
 
 

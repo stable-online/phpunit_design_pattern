@@ -11,7 +11,8 @@
 
     <testsuites>
         <testsuite name="behavior_type">
-            <directory>Tests/behavior</directory>
+            <file>Tests/behavior/IteratorTest.php</file>
+            <file>Tests/behavior/StatusTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
