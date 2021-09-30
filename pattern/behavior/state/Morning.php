@@ -2,18 +2,19 @@
 /**
  * @className:
  * @User     : zw
- * @DateTime : 2021/9/30 12:09 上午
+ * @DateTime : 2021/9/29 11:46 下午
  */
 
-namespace App\behavior;
+namespace App\behavior\state;
+
 
 use JetBrains\PhpStorm\Pure;
 
 /**
- * @Class   AfterNoon
+ * @Class   Morning
  * @package App\behavior
  */
-class AfterNoon implements StateInterface
+class Morning implements StateInterface
 {
     /**
      * @var Person
@@ -21,7 +22,7 @@ class AfterNoon implements StateInterface
     private Person $person;
 
     /**
-     * @constructor AfterNoon.
+     * @constructor Morning.
      *
      * @param  Person  $person
      */
@@ -31,17 +32,18 @@ class AfterNoon implements StateInterface
     }
 
     /**
-     * @Description:
-     * @DateTime   :    2021/9/30 12:12 上午
+     * @Description:    返回信息
+     * @DateTime   :    2021/9/29 11:47 下午
      * @return string
      */
     #[Pure]
     public function getStatus(): string
     {
-        if($this->person->getTimeSlot() == "afternoon"){
-            return "下班";
+        if($this->person->getTimeSlot() == "morning"){
+            return "上班";
         }
-        $night = new Night($this->person);
-        return $night->getStatus();
+
+        $work = new Work($this->person);
+        return $work->getStatus();
     }
 }

@@ -5,7 +5,7 @@
  * @DateTime : 2021/9/29 6:28 下午
  */
 
-namespace App\behavior;
+namespace App\behavior\iterator;
 
 use JetBrains\PhpStorm\Pure;
 

@@ -5,7 +5,7 @@
  * @DateTime : 2021/9/29 11:59 下午
  */
 
-namespace App\behavior;
+namespace App\behavior\state;
 
 interface StateInterface
 {

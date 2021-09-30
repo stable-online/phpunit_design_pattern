@@ -7,7 +7,7 @@
 
 namespace behavior;
 
-use App\behavior\IteratorTools;
+use App\behavior\iterator\IteratorTools;
 use PHPUnit\Framework\TestCase;
 
 /**

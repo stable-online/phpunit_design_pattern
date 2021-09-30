@@ -5,7 +5,7 @@
  * @DateTime : 2021/9/30 12:16 上午
  */
 
-namespace App\behavior;
+namespace App\behavior\state;
 use JetBrains\PhpStorm\Pure;
 
 /**

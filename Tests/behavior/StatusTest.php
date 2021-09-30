@@ -6,7 +6,7 @@
  */
 namespace behavior;
 
-use App\behavior\Person;
+use App\behavior\state\Person;
 use PHPUnit\Framework\TestCase;
 
 /**
