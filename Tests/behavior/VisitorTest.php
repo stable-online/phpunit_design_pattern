@@ -94,6 +94,5 @@ class VisitorTest extends TestCase
         $visitorContext = new VisitorContext();
 
         $this->assertTrue($visitorContext->addFile(new Word()));
-
     }
 }
