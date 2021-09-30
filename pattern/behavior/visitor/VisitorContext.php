@@ -4,7 +4,6 @@
  * @User     : zw
  * @DateTime : 2021/9/30 1:13 下午
  */
-
 namespace App\behavior\visitor;
 
 /**
@@ -31,5 +30,18 @@ class VisitorContext
         $this->file[] = $file;
 
         return true;
+    }
+
+    /**
+     * @Description:    用访问者进行访问
+     * @DateTime   :    2021/9/30 1:34 下午
+     *
+     * @param  VisitorA  $visitor
+     */
+    public function visitor(VisitorA $visitor)
+    {
+        foreach ($this->file as $file){
+            $visitor->visitor($file);
+        }
     }
 }

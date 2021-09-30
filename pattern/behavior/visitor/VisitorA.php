@@ -7,8 +7,6 @@
 
 namespace App\behavior\visitor;
 
-use JetBrains\PhpStorm\Pure;
-
 /**
  * @Class   VisitorA
  * @package App\behavior\visitor

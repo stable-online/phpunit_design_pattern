@@ -92,15 +92,18 @@ class VisitorTest extends TestCase
         $this->assertTrue($visitorContext->addFile(new Word()));
     }
 
-
     /**
      * @Description:    当访问的文件不存在时
      * @DateTime   :    2021/9/30 1:22 下午
      */
-/*    public function test_visitorAFileNotFound()
+    public function test_visitorAFileNotFound()
     {
+        //预定义异常
         $this->expectException(FileNotFoundException::class);
 
-        $visitorA = new VisitorA();
-    }*/
+        $visitorContext = new VisitorContext();
+        $visitorContext->addFile(new Excel());
+
+        $visitorContext->visitor(new VisitorA());
+    }
 }
