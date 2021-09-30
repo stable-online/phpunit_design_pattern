@@ -7,6 +7,7 @@
 namespace App\behavior\visitor;
 
 /**
+ * 访问者上下文
  * @Class   VisitorContext
  * @package App\behavior\visitor
  */
