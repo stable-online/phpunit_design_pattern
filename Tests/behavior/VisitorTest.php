@@ -11,9 +11,11 @@ use App\behavior\visitor\Excel;
 use App\behavior\visitor\FileNotFoundException;
 use App\behavior\visitor\PDF;
 use App\behavior\visitor\VisitorA;
+use App\behavior\visitor\VisitorContext;
 use App\behavior\visitor\Word;
 use JetBrains\PhpStorm\Pure;
 use PHPUnit\Framework\TestCase;
+use SebastianBergmann\CodeCoverage\Report\Html\File;
 
 /**
  * 访问者模式
@@ -81,5 +83,17 @@ class VisitorTest extends TestCase
         $visitorA = new VisitorA(new Excel());
 
         $visitorA->visitor();
+    }
+
+    /**
+     * @Description:    测试访问者上下文
+     * @DateTime   :    2021/9/30 1:11 下午
+     */
+    public function test_visitorAContext()
+    {
+        $visitorContext = new VisitorContext();
+
+        $this->assertTrue($visitorContext->addFile(new Word()));
+
     }
 }
