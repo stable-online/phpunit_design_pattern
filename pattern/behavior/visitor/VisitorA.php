@@ -16,38 +16,29 @@ use JetBrains\PhpStorm\Pure;
 class VisitorA
 {
     /**
-     * @var File
-     */
-    private File $file;
-
-    /**
-     * @constructor VisitorA.
+     * @Description:    访问者
+     * @DateTime   :    2021/9/30 11:32 上午
      *
-     * @param  File  $word
+     * @param  File  $object
+     *
+     * @return string
      */
-    public function __construct(File $word)
+    private function visitorPdf(File $object): string
     {
-        $this->file = $word;
+        return "vistApdf".$object->getContent();
     }
 
     /**
      * @Description:    访问者
      * @DateTime   :    2021/9/30 11:32 上午
+     *
+     * @param  File  $object
+     *
      * @return string
      */
-    private function visitorPdf(): string
+    private function visitorWord(File $object): string
     {
-        return "vistApdf".$this->file->getContent();
-    }
-
-    /**
-     * @Description:    访问者
-     * @DateTime   :    2021/9/30 11:32 上午
-     * @return string
-     */
-    private function visitorWord(): string
-    {
-        return "vistAword".$this->file->getContent();
+        return "vistAword".$object->getContent();
     }
 
     /**
@@ -61,13 +52,17 @@ class VisitorA
      */
     public function __call(string $name, array $arguments): string
     {
-        if(get_class($this->file) == Word::class){
-            return $this->visitorWord();
+        /** @var File $object 文件类*/
+        $object = $arguments[0];
+
+        if(get_class($object) == Word::class){
+            return $this->visitorWord($object);
         }
 
-        if(get_class($this->file) == PDF::class){
-            return $this->visitorPdf();
+        if(get_class($object) == PDF::class){
+            return $this->visitorPdf($object);
         }
+
         throw new FileNotFoundException("not found the visitor program");
     }
 }

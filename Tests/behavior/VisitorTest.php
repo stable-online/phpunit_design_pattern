@@ -52,11 +52,9 @@ class VisitorTest extends TestCase
      */
     public function test_visitorAToPdf()
     {
-        $pdf = new PDF();
+        $visitorA = new VisitorA();
 
-        $visitorA = new VisitorA($pdf);
-
-        $this->assertEquals("vistApdf123",$visitorA->visitor());
+        $this->assertEquals("vistApdf123",$visitorA->visitor(new PDF()));
     }
 
     /**
@@ -65,11 +63,9 @@ class VisitorTest extends TestCase
      */
     public function test_visitorAToWord()
     {
-        $pdf = new Word();
+        $visitorA = new VisitorA();
 
-        $visitorA = new VisitorA($pdf);
-
-        $this->assertEquals("vistAword456",$visitorA->visitor());
+        $this->assertEquals("vistAword456",$visitorA->visitor(new Word()));
     }
 
     /**
@@ -80,9 +76,9 @@ class VisitorTest extends TestCase
     {
         $this->expectException(FileNotFoundException::class);
 
-        $visitorA = new VisitorA(new Excel());
+        $visitorA = new VisitorA();
 
-        $visitorA->visitor();
+        $visitorA->visitor(new Excel());
     }
 
     /**
@@ -95,4 +91,16 @@ class VisitorTest extends TestCase
 
         $this->assertTrue($visitorContext->addFile(new Word()));
     }
+
+
+    /**
+     * @Description:    当访问的文件不存在时
+     * @DateTime   :    2021/9/30 1:22 下午
+     */
+/*    public function test_visitorAFileNotFound()
+    {
+        $this->expectException(FileNotFoundException::class);
+
+        $visitorA = new VisitorA();
+    }*/
 }
