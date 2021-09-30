@@ -13,6 +13,7 @@
         <testsuite name="behavior_type">
             <file>Tests/behavior/IteratorTest.php</file>
             <file>Tests/behavior/StatusTest.php</file>
+            <file>Tests/behavior/VisitorTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
