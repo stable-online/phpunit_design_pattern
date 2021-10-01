@@ -14,6 +14,7 @@
             <file>Tests/behavior/IteratorTest.php</file>
             <file>Tests/behavior/StatusTest.php</file>
             <file>Tests/behavior/VisitorTest.php</file>
+            <file>Tests/behavior/TemplateTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
