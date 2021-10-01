@@ -11,7 +11,7 @@ namespace App\behavior\template;
  * @Class   FTCa
  * @package App\behavior\template
  */
-class FTCa extends Car
+class FTCar extends Car
 {
     public function carName(): string
     {
