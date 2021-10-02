@@ -15,6 +15,7 @@
             <file>Tests/behavior/StatusTest.php</file>
             <file>Tests/behavior/VisitorTest.php</file>
             <file>Tests/behavior/TemplateTest.php</file>
+            <file>Tests/behavior/ObserverTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
