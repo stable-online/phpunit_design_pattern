@@ -15,9 +15,24 @@ use PHPUnit\Framework\MockObject\MockObject;
 class Subject
 {
     /**
+     * @var string
+     */
+    private string $message;
+
+    /**
      * @var array
      */
     private array $observer;
+
+    /**
+     * @constructor Subject.
+     *
+     * @param  string  $message
+     */
+    public function __construct(string $message)
+    {
+        $this->message = $message;
+    }
 
     /**
      * @Description:
@@ -32,5 +47,16 @@ class Subject
         $this->observer[] = $observer;
 
         return true;
+    }
+
+    /**
+     * @Description:
+     * @DateTime   :    2021/10/2 2:58 下午
+     */
+    public function notify()
+    {
+        foreach ($this->observer as $object){
+            $object->notify($this->message);
+        }
     }
 }
