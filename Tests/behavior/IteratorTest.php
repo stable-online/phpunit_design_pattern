@@ -28,7 +28,7 @@ class IteratorTest extends TestCase
         $iteratorTools = new IteratorTools($var);
 
         foreach ($iteratorTools as $key => $val) {
-            $this->assertEquals($var[$key], $iteratorTools->current());
+             $this->assertEquals($var[$key], $iteratorTools->current());
         }
     }
 }
