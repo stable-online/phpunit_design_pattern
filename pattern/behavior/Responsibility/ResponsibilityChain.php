@@ -14,15 +14,15 @@ class ResponsibilityChain
 {
 
     /**
-     * @var
+     * @var Responsibility|MockObject|null
      */
-    public  $header = null ;
+    public Responsibility|null|MockObject $header = null ;
 
 
     /**
-     * @var
+     * @var Responsibility|MockObject|null
      */
-    private  $tail = null ;
+    private Responsibility|null|MockObject $tail = null ;
 
     /**
      * @Description:
@@ -50,6 +50,10 @@ class ResponsibilityChain
      */
     public function handler()
     {
+        if($this->header != null){
+            $this->header->handle();
+        }
+
         return null;
     }
 }
