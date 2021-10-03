@@ -12,10 +12,17 @@ use PHPUnit\Framework\MockObject\MockObject;
 
 class ResponsibilityChain
 {
+
     /**
-     * @var Responsibility|MockObject
+     * @var
      */
-    private Responsibility|MockObject $header;
+    public  $header = null ;
+
+
+    /**
+     * @var
+     */
+    private  $tail = null ;
 
     /**
      * @Description:
@@ -25,9 +32,15 @@ class ResponsibilityChain
      */
     public function addResponsibility(Responsibility|MockObject $object): bool
     {
-//        $this->header = $object;
-//        $this->tail = $object;
+        $object->setResponsibility(null);
 
+        if ($this->header == null) {
+            $this->header = $object;
+            $this->tail = $object;
+        }
+
+        $this->tail->setResponsibility($object);
+        $this->tail = $object;
         return true;
     }
 }
