@@ -43,4 +43,13 @@ class ResponsibilityChain
         $this->tail = $object;
         return true;
     }
+
+    /**
+     * @Description: 执行
+     * @DateTime:    2021/10/3 11:35 下午
+     */
+    public function handler()
+    {
+        return null;
+    }
 }

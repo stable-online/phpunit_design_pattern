@@ -55,7 +55,7 @@
   <font size = 3>
 
   验收标准:
-  - [ ] 生成责任链对象ResponsibilityChain 添加Responsibility 返回为ture
+  - [x] 生成责任链对象ResponsibilityChain 添加Responsibility 返回为ture
   - [ ] 执行责任链 ResponsibilityChain handle,没有责任对象的情况,返回为null
   - [ ] 添加一个责任对象内含`你是一个很傻很丑狗子`的信息 执行责任链返回`你是一个很傻很丑狗子`
   - [ ] 添加一个责任对象内含`你是一个很傻狗子`的信息,然后添加一个处理`很傻`词 责任对象能够接收到`你是一个很傻狗子`的词

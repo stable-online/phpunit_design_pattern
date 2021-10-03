@@ -29,4 +29,15 @@ class ResponsibilityChainTest extends TestCase
 
         $this->assertTrue($responsibilityChain->addResponsibility($mockObject));
     }
+
+    /**
+     * @Description:
+     * @DateTime:    2021/10/3 11:34 下午
+     */
+    public function test_when_chain_is_empty_then_null()
+    {
+        $responsibilityChain = new ResponsibilityChain();
+
+        $this->assertNull($responsibilityChain->handler());
+    }
 }
