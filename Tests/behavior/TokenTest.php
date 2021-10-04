@@ -13,6 +13,7 @@ use JetBrains\PhpStorm\Pure;
 use PHPUnit\Framework\TestCase;
 
 /**
+ * 备忘录模式测试
  * @Class TokenTest
  * @package behavior
  */
