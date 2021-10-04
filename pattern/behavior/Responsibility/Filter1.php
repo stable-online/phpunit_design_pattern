@@ -28,6 +28,8 @@ class Filter1 implements Responsibility
     public function setResponsibility(Responsibility|MockObject|null $responsibility): bool
     {
         $this->nextResponsibility = $responsibility;
+
+        return true;
     }
 
     /**
@@ -38,9 +40,12 @@ class Filter1 implements Responsibility
      */
     public function handle(string $msg): string
     {
+        $msg = str_replace("很傻","",$msg);
+
         if ($this->nextResponsibility != null) {
             return $this->nextResponsibility->handle($msg);
         }
+
         return $msg;
     }
 }

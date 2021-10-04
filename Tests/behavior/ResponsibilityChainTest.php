@@ -6,6 +6,8 @@
  */
 namespace behavior;
 
+use App\behavior\Responsibility\Filter1;
+use App\behavior\Responsibility\Filter2;
 use App\behavior\Responsibility\Responsibility;
 use App\behavior\Responsibility\ResponsibilityChain;
 use PHPUnit\Framework\TestCase;
@@ -39,5 +41,58 @@ class ResponsibilityChainTest extends TestCase
         $responsibilityChain = new ResponsibilityChain();
 
         $this->assertEquals("你是一个很傻很丑狗子",$responsibilityChain->handler('你是一个很傻很丑狗子'));
+    }
+
+    /**
+     * @Description: 检测输入的值
+     * @DateTime:    2021/10/4 10:14 上午
+     */
+    public function test_filter_1_input()
+    {
+        //设置责任链
+        $responsibilityChain = new ResponsibilityChain();
+
+        //设置桩点
+        $mockObject = $this->getMockBuilder(Filter1::class)->onlyMethods(["handle","setResponsibility"])->getMock();
+        $mockObject->expects($this->once())->method("handle")->with($this->equalTo("你是一个很傻狗子"));
+
+        //设置责任链信息
+        $responsibilityChain->addResponsibility($mockObject);
+
+        //传值
+        $responsibilityChain->handler("你是一个很傻狗子");
+    }
+
+    /**
+     * @Description: 验证输出值
+     * @DateTime:    2021/10/4 10:03 上午
+     */
+    public function test_filter_1_output()
+    {
+        $responsibilityChain = new ResponsibilityChain();
+
+        $responsibilityChain->addResponsibility(new Filter1());
+
+        $this->assertEquals("你是一个狗子",$responsibilityChain->handler("你是一个很傻狗子"));
+    }
+
+    /**
+     * @Description: 检测输入的值
+     * @DateTime:    2021/10/4 10:14 上午
+     */
+    public function test_filter_2_input()
+    {
+        //设置责任链
+        $responsibilityChain = new ResponsibilityChain();
+
+        //设置桩点
+        $mockObject = $this->getMockBuilder(Filter2::class)->onlyMethods(["handle","setResponsibility"])->getMock();
+        $mockObject->expects($this->once())->method("handle")->with($this->equalTo("你是一个很丑狗子"));
+
+        //设置责任链信息
+        $responsibilityChain->addResponsibility($mockObject);
+
+        //传值
+        $responsibilityChain->handler("你是一个很丑狗子");
     }
 }

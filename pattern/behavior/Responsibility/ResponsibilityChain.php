@@ -37,6 +37,7 @@ class ResponsibilityChain
         if ($this->header == null) {
             $this->header = $object;
             $this->tail = $object;
+            return true;
         }
 
         $this->tail->setResponsibility($object);
@@ -53,7 +54,7 @@ class ResponsibilityChain
     public function handler(string $msg): ?string
     {
         if($this->header != null){
-            $this->header->handle($msg);
+            return $this->header->handle($msg);
         }
 
         return $msg;
