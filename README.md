@@ -88,6 +88,8 @@
   - [x] 输入 5 - 2 输出 4
   - [x] 输入 4 / 2 输出2
   - [x] 输入 4 / 2 输出2
+    </font>
+
 
 * <font color=red>策略模式 (Strategy pattern)  </font>  
   <font size = 3>一句话需求: 下班回家 </font>   
