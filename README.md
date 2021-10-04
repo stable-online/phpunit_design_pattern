@@ -107,6 +107,6 @@
   <font size = 3>
 
   验收标准:
-  - [ ] 添加 CatCommand 命令, 执行命令输入test, lsCommand能接受到test
+  - [x] 添加 CatCommand 命令, 执行命令输入test, lsCommand能接受到test
 </font>
   
