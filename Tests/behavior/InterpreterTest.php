@@ -39,4 +39,15 @@ class InterpreterTest extends TestCase
 
         $this->assertEquals(2,$calculatorService->call(1,"add",1));
     }
+
+    /**
+     * @Description:    当输入1+2等于2
+     * @DateTime   :    2021/10/4 3:33 下午
+     */
+    public function test_when_1_sub_1_then_return_2()
+    {
+        $calculatorService = new CalculatorService();
+
+        $this->assertEquals(1,$calculatorService->call(2,"sub",1));
+    }
 }
