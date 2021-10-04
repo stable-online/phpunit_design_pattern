@@ -102,13 +102,22 @@
   - [x] 向工厂添加地铁类型 返回为true
   - [x] 向工厂获取地铁(Train) 返回为Train
     </font>
-    
+
 * <font color=red>命令模式 (command pattern)  </font>  
   <font size = 3>一句话需求: 执行linux 命令 cat grep </font>   
-  <font size = 3>思考: </font>
+  <font size = 3>思考: 没有做到小步提交, 原因可能是因为没有将问题拆解 </font>
   <font size = 3>
 
   验收标准:
   - [x] 添加 CatCommand 命令, 执行命令输入test, lsCommand能接受到test
-</font>
+    </font>
+* <font color=red>中介模式 (command pattern)  </font>  
+      <font size = 3>一句话需求: wechat 好友之间的发送信息</font>   
+      <font size = 3>思考: </font>
+      <font size = 3>
+
+  验收标准:
+  - [x] 向微信注册用户a, 微信返回true,
+  - [x] 用户a给微信好友b给发送信息123, 微信好友能够接到信息123
+    </font>
   

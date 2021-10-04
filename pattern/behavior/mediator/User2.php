@@ -1,0 +1,30 @@
+<?php
+/**
+ * @className:
+ * @User     : zw
+ * @DateTime : 2021/10/4 9:35 下午
+ */
+
+namespace App\behavior\mediator;
+
+/**
+ * @Class   User1
+ * @package App\behavior\mediator
+ */
+class User2 implements User
+{
+    use UserTrait;
+
+    /**
+     * @Description:
+     * @DateTime   :    2021/10/4 9:37 下午
+     *
+     * @param  string  $msg
+     *
+     * @return string
+     */
+    public function notify(string $msg): string
+    {
+        return "user2:".$msg;
+    }
+}
