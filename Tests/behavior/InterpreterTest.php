@@ -50,4 +50,11 @@ class InterpreterTest extends TestCase
 
         $this->assertEquals(1,$calculatorService->call(2,"sub",1));
     }
+
+    public function test_when_2_cheng_3_then_return_6()
+    {
+        $calculatorService = new CalculatorService();
+
+        $this->assertEquals(6,$calculatorService->call(2,"multiply",3));
+    }
 }
