@@ -18,6 +18,7 @@
             <file>Tests/behavior/ObserverTest.php</file>
             <file>Tests/behavior/ResponsibilityChainTest.php</file>
             <file>Tests/behavior/TokenTest.php</file>
+            <file>Tests/behavior/InterpreterTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
