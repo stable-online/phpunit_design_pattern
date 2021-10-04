@@ -93,11 +93,20 @@
   <font size = 3>一句话需求: 下班回家 </font>   
   <font size = 3>思考:下班回家是目的,达到这个目的的方式有很多种, 比如骑自行车回家,做公交回家等等. 工具有一个统一的策略 `车`,车的属性时行驶, 编写测试 是从用户接触的最直接的角度去写的.用户获取`车` 是从街道(车工厂)上获取的,还是没有小步快跑的概念,没法做到,小步提交</font>
   <font size = 3>
-  
+
   验收标准:
   - [x] 向工厂添加自行车类型 返回为true
   - [x] 向工厂获取自行车(bike) 返回为Bike
   - [x] 向工厂添加地铁类型 返回为true
   - [x] 向工厂获取地铁(Train) 返回为Train
-  </font>
+    </font>
+    
+* <font color=red>命令模式 (command pattern)  </font>  
+  <font size = 3>一句话需求: 执行linux 命令 cat grep </font>   
+  <font size = 3>思考: </font>
+  <font size = 3>
+
+  验收标准:
+  - [ ] 添加 CatCommand 命令, 执行命令输入test, lsCommand能接受到test
+</font>
   
