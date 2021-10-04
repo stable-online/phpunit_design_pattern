@@ -51,10 +51,25 @@ class InterpreterTest extends TestCase
         $this->assertEquals(1,$calculatorService->call(2,"sub",1));
     }
 
-    public function test_when_2_cheng_3_then_return_6()
+    /**
+     * @Description:    乘
+     * @DateTime   :    2021/10/4 4:00 下午
+     */
+    public function test_when_2_multiply_3_then_return_6()
     {
         $calculatorService = new CalculatorService();
 
         $this->assertEquals(6,$calculatorService->call(2,"multiply",3));
+    }
+
+    /**
+     * @Description:    除
+     * @DateTime   :    2021/10/4 4:00 下午
+     */
+    public function test_when_10_divided_5_then_return_2()
+    {
+        $calculatorService = new CalculatorService();
+
+        $this->assertEquals(2,$calculatorService->call(10,"divided",5));
     }
 }
