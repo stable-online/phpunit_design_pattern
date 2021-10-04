@@ -7,7 +7,7 @@
 
 namespace behavior;
 
-use App\behavior\Interpreter\CalculatorService;
+use App\behavior\interpreter\CalculatorService;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,7 +30,7 @@ class InterpreterTest extends TestCase
     }
 
     /**
-     * @Description:    当输入1+2等于2
+     * @Description:    加
      * @DateTime   :    2021/10/4 3:33 下午
      */
     public function test_when_1_add_1_then_return_2()
@@ -41,7 +41,7 @@ class InterpreterTest extends TestCase
     }
 
     /**
-     * @Description:    当输入1+2等于2
+     * @Description:    减
      * @DateTime   :    2021/10/4 3:33 下午
      */
     public function test_when_1_sub_1_then_return_2()

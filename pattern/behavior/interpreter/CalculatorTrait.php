@@ -5,7 +5,7 @@
  * @DateTime : 2021/10/4 3:19 下午
  */
 
-namespace App\behavior\Interpreter;
+namespace App\behavior\interpreter;
 
 
 trait CalculatorTrait

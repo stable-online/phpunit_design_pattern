@@ -2,24 +2,26 @@
 /**
  * @className:
  * @User: zw
- * @DateTime: 2021/10/4 10:26 上午
+ * @DateTime: 2021/10/3 11:40 下午
  */
-
-namespace App\behavior\Responsibility;
-
+namespace App\behavior\responsibility;
 
 use PHPUnit\Framework\MockObject\MockObject;
 
-class Filter2 implements Responsibility
+/**
+ * @Class Filter1
+ * @package App\behavior\Responsibility
+ */
+class Filter1 implements Responsibility
 {
     /**
      * @var Responsibility|MockObject|null
      */
-    private Responsibility|null|MockObject $nextResponsibility;
+    public Responsibility|null|MockObject $nextResponsibility;
 
     /**
      * @Description:
-     * @DateTime:    2021/10/4 10:26 上午
+     * @DateTime:    2021/10/3 11:42 下午
      * @param Responsibility|MockObject|null $responsibility
      * @return bool
      */
@@ -32,13 +34,13 @@ class Filter2 implements Responsibility
 
     /**
      * @Description:
-     * @DateTime:    2021/10/4 10:26 上午
+     * @DateTime:    2021/10/3 11:43 下午
      * @param string $msg
-     * @return string
+     * @return void
      */
     public function handle(string $msg): string
     {
-        $msg = str_replace("很丑","",$msg);
+        $msg = str_replace("很傻","",$msg);
 
         if ($this->nextResponsibility != null) {
             return $this->nextResponsibility->handle($msg);

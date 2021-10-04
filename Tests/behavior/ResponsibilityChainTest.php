@@ -6,10 +6,10 @@
  */
 namespace behavior;
 
-use App\behavior\Responsibility\Filter1;
-use App\behavior\Responsibility\Filter2;
-use App\behavior\Responsibility\Responsibility;
-use App\behavior\Responsibility\ResponsibilityChain;
+use App\behavior\responsibility\Filter1;
+use App\behavior\responsibility\Filter2;
+use App\behavior\responsibility\Responsibility;
+use App\behavior\responsibility\ResponsibilityChain;
 use PHPUnit\Framework\TestCase;
 
 /**

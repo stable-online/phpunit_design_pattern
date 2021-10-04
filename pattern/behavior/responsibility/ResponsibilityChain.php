@@ -5,7 +5,7 @@
  * @DateTime: 2021/10/3 11:03 下午
  */
 
-namespace App\behavior\Responsibility;
+namespace App\behavior\responsibility;
 
 
 use PHPUnit\Framework\MockObject\MockObject;
