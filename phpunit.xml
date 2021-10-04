@@ -19,6 +19,7 @@
             <file>Tests/behavior/ResponsibilityChainTest.php</file>
             <file>Tests/behavior/TokenTest.php</file>
             <file>Tests/behavior/InterpreterTest.php</file>
+            <file>Tests/behavior/StrategyTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
