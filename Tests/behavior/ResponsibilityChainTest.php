@@ -109,5 +109,18 @@ class ResponsibilityChainTest extends TestCase
         $this->assertEquals("你是一个狗子",$responsibilityChain->handler("你是一个很丑狗子"));
     }
 
+    /**
+     * @Description: 验证filter1 和 filter2的输出值
+     * @DateTime:    2021/10/4 10:33 上午
+     */
+    public function test_filter1_and_filter2_input()
+    {
+        $responsibilityChain = new ResponsibilityChain();
 
+        $responsibilityChain->addResponsibility(new Filter1());
+        $responsibilityChain->addResponsibility(new Filter2());
+
+        $responsibilityChain->handler("你是一个很傻很丑狗子");
+        $this->assertEquals("你是一个狗子",$responsibilityChain->handler("你是一个很傻很丑狗子"));
+    }
 }
