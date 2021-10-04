@@ -17,12 +17,13 @@ interface Responsibility
      * @param Responsibility|MockObject|null $responsibility
      * @return mixed
      */
-    public function setResponsibility(Responsibility|MockObject|null $responsibility) : bool;
+    public function setResponsibility(Responsibility|MockObject|null $responsibility): bool;
 
     /**
-     * @Description:
+     * @Description: 执行
      * @DateTime:    2021/10/3 11:24 下午
+     * @param string $msg
      * @return mixed
      */
-    public function handle();
+    public function handle(string $msg): string;
 }

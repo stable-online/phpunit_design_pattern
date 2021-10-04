@@ -47,13 +47,15 @@ class ResponsibilityChain
     /**
      * @Description: 执行
      * @DateTime:    2021/10/3 11:35 下午
+     * @param string $msg
+     * @return string|null
      */
-    public function handler()
+    public function handler(string $msg): ?string
     {
         if($this->header != null){
-            $this->header->handle();
+            $this->header->handle($msg);
         }
 
-        return null;
+        return $msg;
     }
 }

@@ -38,6 +38,6 @@ class ResponsibilityChainTest extends TestCase
     {
         $responsibilityChain = new ResponsibilityChain();
 
-        $this->assertNull($responsibilityChain->handler());
+        $this->assertEquals("你是一个很傻很丑狗子",$responsibilityChain->handler('你是一个很傻很丑狗子'));
     }
 }
