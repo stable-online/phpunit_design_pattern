@@ -47,7 +47,7 @@ class ResponsibilityChainTest extends TestCase
      * @Description: 检测输入的值
      * @DateTime:    2021/10/4 10:14 上午
      */
-    public function test_filter_1_input()
+    public function test_filter1_input()
     {
         //设置责任链
         $responsibilityChain = new ResponsibilityChain();
@@ -67,7 +67,7 @@ class ResponsibilityChainTest extends TestCase
      * @Description: 验证输出值
      * @DateTime:    2021/10/4 10:03 上午
      */
-    public function test_filter_1_output()
+    public function test_filter1_output()
     {
         $responsibilityChain = new ResponsibilityChain();
 
@@ -80,7 +80,7 @@ class ResponsibilityChainTest extends TestCase
      * @Description: 检测输入的值
      * @DateTime:    2021/10/4 10:14 上午
      */
-    public function test_filter_2_input()
+    public function test_filter2_input()
     {
         //设置责任链
         $responsibilityChain = new ResponsibilityChain();
@@ -95,4 +95,19 @@ class ResponsibilityChainTest extends TestCase
         //传值
         $responsibilityChain->handler("你是一个很丑狗子");
     }
+
+    /**
+     * @Description: 检测输出的值
+     * @DateTime:    2021/10/4 10:14 上午
+     */
+    public function test_filter2_output()
+    {
+        $responsibilityChain = new ResponsibilityChain();
+
+        $responsibilityChain->addResponsibility(new Filter2());
+
+        $this->assertEquals("你是一个狗子",$responsibilityChain->handler("你是一个很丑狗子"));
+    }
+
+
 }

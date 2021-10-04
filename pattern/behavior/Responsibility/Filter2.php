@@ -12,6 +12,10 @@ use PHPUnit\Framework\MockObject\MockObject;
 
 class Filter2 implements Responsibility
 {
+    /**
+     * @var Responsibility|MockObject|null
+     */
+    private Responsibility|null|MockObject $nextResponsibility;
 
     /**
      * @Description:
@@ -21,7 +25,9 @@ class Filter2 implements Responsibility
      */
     public function setResponsibility(Responsibility|MockObject|null $responsibility): bool
     {
-        // TODO: Implement setResponsibility() method.
+        $this->nextResponsibility = $responsibility;
+
+        return true;
     }
 
     /**
@@ -32,6 +38,12 @@ class Filter2 implements Responsibility
      */
     public function handle(string $msg): string
     {
-        // TODO: Implement handle() method.
+        $msg = str_replace("很丑","",$msg);
+
+        if ($this->nextResponsibility != null) {
+            return $this->nextResponsibility->handle($msg);
+        }
+
+        return $msg;
     }
 }
