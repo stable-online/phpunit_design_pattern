@@ -8,10 +8,24 @@
 namespace App\behavior\factory;
 
 
+use http\Exception\RuntimeException;
 use JetBrains\PhpStorm\Pure;
 
 class HpFactory
 {
+    /**
+     * @var array
+     */
+    private array $typeMap;
+
+    /**
+     * @constructor HpFactory.
+     */
+    public function __construct()
+    {
+        $this->loadTypeMap();
+    }
+
     /**
      * @Description:
      * @DateTime   :    2021/10/7 8:45 下午
@@ -20,13 +34,23 @@ class HpFactory
      *
      * @return S1TypeOfPhone
      */
-    #[Pure]
     public function make(string $type): TypeOfPhone
     {
-        if($type === "s1"){
-            return new S1TypeOfPhone(new S1Type());
-        }elseif ($type === "s2"){
-            return new S2TypeOfPhone(new S2Type());
+        if ($TypeOfPhone = $this->typeMap[$type]) {
+            return $TypeOfPhone;
         }
+        throw new RuntimeException("not fount type class", 400);
+    }
+
+    /**
+     * @Description:
+     * @DateTime   :    2021/10/7 9:24 下午
+     */
+    private function loadTypeMap()
+    {
+        $this->typeMap = [
+            "s1" => new S1TypeOfPhone(new S1Type()),
+            "s2" => new S2TypeOfPhone(new S2Type()),
+        ];
     }
 }
