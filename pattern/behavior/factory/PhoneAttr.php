@@ -19,5 +19,5 @@ interface PhoneAttr
      * @DateTime   :    2021/10/7 8:57 下午
      * @return mixed
      */
-    public function getAttr(): mixed;
+    public function getAttr(): string;
 }

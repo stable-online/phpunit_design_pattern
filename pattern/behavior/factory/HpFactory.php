@@ -12,7 +12,6 @@ use JetBrains\PhpStorm\Pure;
 
 class HpFactory
 {
-
     /**
      * @Description:
      * @DateTime   :    2021/10/7 8:45 下午
@@ -22,8 +21,12 @@ class HpFactory
      * @return S1TypeOfPhone
      */
     #[Pure]
-    public function make(string $type): S1TypeOfPhone
+    public function make(string $type): TypeOfPhone
     {
-        return new S1TypeOfPhone(new S1Type());
+        if($type === "s1"){
+            return new S1TypeOfPhone(new S1Type());
+        }elseif ($type === "s2"){
+            return new S2TypeOfPhone(new S2Type());
+        }
     }
 }

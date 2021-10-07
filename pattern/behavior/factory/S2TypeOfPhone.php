@@ -2,15 +2,13 @@
 /**
  * @className:
  * @User     : zw
- * @DateTime : 2021/10/7 8:44 下午
+ * @DateTime : 2021/10/7 9:10 下午
  */
+
 namespace App\behavior\factory;
 
-/**
- * @Class   S1TypeOfPhone
- * @package App\behavior\factory
- */
-class S1TypeOfPhone implements TypeOfPhone
+
+class S2TypeOfPhone implements TypeOfPhone
 {
     /**
      * @var PhoneAttr
@@ -28,8 +26,9 @@ class S1TypeOfPhone implements TypeOfPhone
     }
 
     /**
-     * @Description:    get attr from phone
-     * @DateTime   :    2021/10/7 8:51 下午
+     * @Description:
+     * @DateTime   :    2021/10/7 9:18 下午
+     * @return string
      */
     public function getAttr(): string
     {

@@ -8,6 +8,7 @@ namespace behavior;
 
 use App\behavior\factory\HpFactory;
 use App\behavior\factory\S1TypeOfPhone;
+use App\behavior\factory\S2TypeOfPhone;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -40,5 +41,20 @@ class FactoryTest extends TestCase
         $this->assertInstanceOf(S1TypeOfPhone::class, $s1TypeOfPhone);
 
         $this->assertEquals("s1_attr",$s1TypeOfPhone->getAttr());
+    }
+
+    /**
+     * @Description:    从惠普工厂获取S2类型的手机
+     * @DateTime   :    2021/10/7 9:07 下午
+     */
+    public function test_get_S2Type_From_HpFactory()
+    {
+        $hpFactory = new HpFactory();
+
+        $s2TypeOfPhone = $hpFactory->make("s2");
+
+        $this->assertInstanceOf(S2TypeOfPhone::class,$s2TypeOfPhone);
+
+        $this->assertEquals("s2_attr",$s2TypeOfPhone->getAttr());
     }
 }
