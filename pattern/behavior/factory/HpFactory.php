@@ -22,8 +22,8 @@ class HpFactory
      * @return S1TypeOfPhone
      */
     #[Pure]
-    public function make(string $type)
+    public function make(string $type): S1TypeOfPhone
     {
-        return new S1TypeOfPhone();
+        return new S1TypeOfPhone(new S1Type());
     }
 }
