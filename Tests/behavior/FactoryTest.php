@@ -40,7 +40,7 @@ class FactoryTest extends TestCase
 
         $this->assertInstanceOf(S1TypeOfPhone::class, $s1TypeOfPhone);
 
-        $this->assertEquals("s1_attr",$s1TypeOfPhone->getAttr());
+        $this->assertEquals("s1_attr",$s1TypeOfPhone->getPhoneAttr());
     }
 
     /**
@@ -55,6 +55,21 @@ class FactoryTest extends TestCase
 
         $this->assertInstanceOf(S2TypeOfPhone::class,$s2TypeOfPhone);
 
-        $this->assertEquals("s2_attr",$s2TypeOfPhone->getAttr());
+        $this->assertEquals("s2_attr",$s2TypeOfPhone->getPhoneAttr());
+    }
+
+    /**
+     * @Description:    获取S2型号的电脑
+     * @DateTime   :    2021/10/7 10:05 下午
+     */
+    public function test_get_S2Type_computer_from_Hp_factory()
+    {
+        $hpFactory = new HpFactory();
+
+        $s2TypeOfPhone = $hpFactory->make("s2");
+
+        $this->assertInstanceOf(S2TypeOfPhone::class,$s2TypeOfPhone);
+
+        $this->assertEquals("s2_attr",$s2TypeOfPhone->getComputerAttr());
     }
 }

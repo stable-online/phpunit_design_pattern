@@ -30,8 +30,19 @@ class S2TypeOfPhone implements TypeOfPhone
      * @DateTime   :    2021/10/7 9:18 下午
      * @return string
      */
-    public function getAttr(): string
+    public function getPhoneAttr(): string
     {
         return $this->phoneAttr->getAttr();
+    }
+
+    /**
+     * @Description:
+     * @DateTime   :    2021/10/7 10:12 下午
+     * @return string
+     */
+    public function getComputerAttr(): string
+    {
+        return "s2_attr";
+        // TODO: Implement getComputerAttr() method.
     }
 }

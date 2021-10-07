@@ -31,8 +31,18 @@ class S1TypeOfPhone implements TypeOfPhone
      * @Description:    get attr from phone
      * @DateTime   :    2021/10/7 8:51 下午
      */
-    public function getAttr(): string
+    public function getPhoneAttr(): string
     {
         return $this->phoneAttr->getAttr();
+    }
+
+    /**
+     * @Description:
+     * @DateTime   :    2021/10/7 10:08 下午
+     * @return string
+     */
+    public function getComputerAttr(): string
+    {
+        return "s1_attr";
     }
 }
