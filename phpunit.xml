@@ -21,6 +21,7 @@
             <file>Tests/behavior/InterpreterTest.php</file>
             <file>Tests/behavior/StrategyTest.php</file>
             <file>Tests/behavior/CommandChainTest.php</file>
+            <file>Tests/behavior/FactoryTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
