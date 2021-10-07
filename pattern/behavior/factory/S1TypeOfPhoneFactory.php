@@ -23,6 +23,6 @@ class S1TypeOfPhoneFactory implements TypeFactory
     #[Pure]
     public function typeOfPhone(): TypeOfPhone
     {
-        return new S1TypeOfPhone(new S1Type());
+        return new S1TypeOfPhone(new S1Type(),new S1ComputerType());
     }
 }

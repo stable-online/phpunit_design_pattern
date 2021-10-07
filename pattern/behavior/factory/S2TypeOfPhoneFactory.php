@@ -21,7 +21,7 @@ class S2TypeOfPhoneFactory implements TypeFactory
     #[Pure]
     public function typeOfPhone(): TypeOfPhone
     {
-        return new S2TypeOfPhone(new S2Type());
+        return new S2TypeOfPhone(new S2Type(),new S1ComputerType());
         // TODO: Implement typeOfPhone() method.
     }
 }

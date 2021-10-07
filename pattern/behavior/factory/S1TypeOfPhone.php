@@ -16,15 +16,21 @@ class S1TypeOfPhone implements TypeOfPhone
      * @var PhoneAttr
      */
     private PhoneAttr $phoneAttr;
+    /**
+     * @var ComputerAttr
+     */
+    private ComputerAttr $computerAttr;
 
     /**
      * @constructor S1TypeOfPhone.
      *
-     * @param  PhoneAttr  $phoneAttr
+     * @param  PhoneAttr     $phoneAttr
+     * @param  ComputerAttr  $computerAttr
      */
-    public function __construct(PhoneAttr $phoneAttr)
+    public function __construct(PhoneAttr $phoneAttr, ComputerAttr $computerAttr)
     {
         $this->phoneAttr = $phoneAttr;
+        $this->computerAttr = $computerAttr;
     }
 
     /**
@@ -43,6 +49,6 @@ class S1TypeOfPhone implements TypeOfPhone
      */
     public function getComputerAttr(): string
     {
-        return "s1_attr";
+        return $this->computerAttr->getAttr();
     }
 }
