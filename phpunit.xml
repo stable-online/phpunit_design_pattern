@@ -28,6 +28,7 @@
             <file>Tests/create/FactoryTest.php</file>
             <file>Tests/create/BuilderTest.php</file>
             <file>Tests/create/SingletonTest.php</file>
+            <file>Tests/create/PrototypeTest.php</file>
         </testsuite>
     </testsuites>
     <php>

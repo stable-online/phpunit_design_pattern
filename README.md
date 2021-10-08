@@ -32,7 +32,15 @@
   <font size = 3>  
   验收标准:
   - [x] 当调用类Foo的getBar1方法时, getBar1返回Bar对象;当调用类Foo的getBar2方法时, getBar2返回Bar对象;  
-    </font>    
+    </font>
+
+* <font color=red>原型模式(prototype model ) </font>  
+  <font size = 3>一句话需求: 以复制的方式解决大数据创建的问题</font>   
+  <font size = 3>  
+  验收标准:
+  - [x] 浅拷贝: 当调用对象Foo的copy方法时,copy返回Foo_c对象, 调用Foo对象的setBar1Parameter传值1 调用Foo_c的对象的getBar1Parameter方法,返回1;
+  - [x] 深拷贝: 当调用对象Foo1的copy方法时,copy返回Foo1_c对象, 调用Foo1对象的setBar1Parameter传值1 调用Foo1_c的对象的getBar1Parameter方法,返回null;
+    </font>
 ## 7种结构型 (struct type)
 
 ## 11种行为型 (behavior type)
