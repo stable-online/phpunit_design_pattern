@@ -48,7 +48,15 @@
   验收标准:
   - [x] 通过proxy代理类调用图片ImagerService服务的call方法,返回proxy_123.jpg 
     </font>
-    
+
+* <font color=red>桥接模式(bridging model ) </font>  
+  <font size = 3>一句话需求: 手机品牌和手机软件不兼容的问题.</font>   
+  <font size = 3>  
+  验收标准:
+  - [x] 调用苹果品牌的软件 功能1为 "苹果拍照",功能2位 "苹果打电话"
+  - [ ] 调用华为品牌的软件 功能1为 "华为听音乐",功能2位 "华为打地鼠游戏"
+    </font>
+
 ## 11种行为型 (behavior type)
 * <font color=red>迭代器模式 (iterator)  </font>
 * <font color=red>状态模式 (status)</font>  
