@@ -5,7 +5,7 @@
  * @DateTime : 2021/10/7 8:42 下午
  */
 
-namespace App\behavior\factory;
+namespace App\create\factory;
 
 
 use http\Exception\RuntimeException;

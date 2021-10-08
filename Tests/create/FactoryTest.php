@@ -4,11 +4,11 @@
  * @User     : zw
  * @DateTime : 2021/10/7 8:36 下午
  */
-namespace behavior;
+namespace create;
 
-use App\behavior\factory\HpFactory;
-use App\behavior\factory\S1TypeOfPhone;
-use App\behavior\factory\S2TypeOfPhone;
+use App\create\factory\HpFactory;
+use App\create\factory\S1TypeOfPhone;
+use App\create\factory\S2TypeOfPhone;
 use PHPUnit\Framework\TestCase;
 
 /**

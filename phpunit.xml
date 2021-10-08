@@ -21,11 +21,11 @@
             <file>Tests/behavior/InterpreterTest.php</file>
             <file>Tests/behavior/StrategyTest.php</file>
             <file>Tests/behavior/CommandChainTest.php</file>
-            <file>Tests/behavior/FactoryTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
         </testsuite>
-        <testsuite name="created_type">
+        <testsuite name="create_type">
+            <file>Tests/create/FactoryTest.php</file>
         </testsuite>
     </testsuites>
     <php>

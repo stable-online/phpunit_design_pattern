@@ -5,7 +5,7 @@
  * @DateTime : 2021/10/7 9:19 下午
  */
 
-namespace App\behavior\factory;
+namespace App\create\factory;
 
 /**
  * @Class   S2Type

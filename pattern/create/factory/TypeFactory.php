@@ -5,7 +5,7 @@
  * @DateTime : 2021/10/7 9:34 下午
  */
 
-namespace App\behavior\factory;
+namespace App\create\factory;
 
 interface TypeFactory
 {
