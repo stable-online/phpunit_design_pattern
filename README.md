@@ -42,7 +42,13 @@
   - [x] 深拷贝: 当调用对象Foo1的copy方法时,copy返回Foo1_c对象, 调用Foo1对象的setBar1Parameter传值1 调用Foo1_c的对象的getBar1Parameter方法,返回null;
     </font>
 ## 7种结构型 (struct type)
-
+* <font color=red>代理模式(proxy model ) </font>  
+  <font size = 3>一句话需求: 在三方接口上添加新的功能</font>   
+  <font size = 3>  
+  验收标准:
+  - [x] 通过proxy代理类调用图片ImagerService服务的call方法,返回proxy_123.jpg 
+    </font>
+    
 ## 11种行为型 (behavior type)
 * <font color=red>迭代器模式 (iterator)  </font>
 * <font color=red>状态模式 (status)</font>  

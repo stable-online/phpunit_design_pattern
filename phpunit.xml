@@ -23,6 +23,8 @@
             <file>Tests/behavior/CommandChainTest.php</file>
         </testsuite>
         <testsuite name="struct_type">
+            <file>Tests/struct/ProxyTest.php</file>
+
         </testsuite>
         <testsuite name="create_type">
             <file>Tests/create/FactoryTest.php</file>
