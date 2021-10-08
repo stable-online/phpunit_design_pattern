@@ -27,6 +27,7 @@
         <testsuite name="create_type">
             <file>Tests/create/FactoryTest.php</file>
             <file>Tests/create/BuilderTest.php</file>
+            <file>Tests/create/SingletonTest.php</file>
         </testsuite>
     </testsuites>
     <php>

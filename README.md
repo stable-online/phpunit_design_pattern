@@ -19,14 +19,20 @@
   - [x] 新增惠普工厂获取S1型号的电脑,工厂存在S1型号流水线,工厂返回S1型号的手机对象, 从对象中获取型号为S1
     </font>
 
-* <font color=red>建造者模式(builder factory ) </font>  
+* <font color=red>建造者模式(builder model ) </font>  
   <font size = 3>一句话需求: 小明</font>   
   <font size = 3>  
   验收标准: 
-  - [ ] 调用小明对象, 返回 身高:1,体重:2,爱好:3,年龄:5;
-  - [ ] 新增需求: 调用小明对象, 返回 身高:1,体重:2,爱好:3,年龄:5,职业:6; 
+  - [x] 调用小明对象, 返回 身高:1,体重:2,爱好:3,年龄:5;
+  - [x] 新增需求: 调用小明对象, 返回 身高:1,体重:2,爱好:3,年龄:5,职业:6; 
     </font>
-    
+
+* <font color=red>单例模式(singleton model ) </font>  
+  <font size = 3>一句话需求: 在一个类的不同方法中 调用另一个对象</font>   
+  <font size = 3>  
+  验收标准:
+  - [x] 当调用类Foo的getBar1方法时, getBar1返回Bar对象;当调用类Foo的getBar2方法时, getBar2返回Bar对象;  
+    </font>    
 ## 7种结构型 (struct type)
 
 ## 11种行为型 (behavior type)
