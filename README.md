@@ -95,6 +95,16 @@
   - [x] Company公司添加子公司(son1)返回为true
   - [x] Company公司添加子公司(son1)返回为true,子公司(son1)添加子公司(son1-1)返回为true,公司获取子公司 返回子公司名称(总公司son1son1-1).
     </font>
+
+* <font color=red>门面模式(Facade model) </font>  
+  <font size = 3>一句话需求: 去三亚旅游,坐飞机,住酒店,玩</font>   
+  <font size = 3>  
+  验收标准:
+  - [x] 调用飞机 返回起飞
+  - [x] 调用住酒店 返回住酒店完成
+  - [x] 调用玩, 返回玩的很开心
+  - [x] 调用飞机酒店和玩 返回 起飞住酒店玩的很开心
+    </font>
     
 ## 11种行为型 (behavior type)
 * <font color=red>迭代器模式 (iterator)  </font>
