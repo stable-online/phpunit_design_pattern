@@ -84,6 +84,14 @@
   - [x] 电视对象插入三个头插座对象,返回电视已充电.
     </font>    
 
+* <font color=red>组合模式(Composite model) </font>  
+  <font size = 3>一句话需求: 公司下方有很多子公司 子公司下方又有子子公司 </font>   
+  <font size = 3>  
+  验收标准:
+  - [x] Company公司添加子公司(son1)返回为true
+  - [x] Company公司添加子公司(son1)返回为true,子公司(son1)添加子公司(son1-1)返回为true,公司获取子公司 返回子公司名称(总公司son1son1-1).
+    </font>
+    
 ## 11种行为型 (behavior type)
 * <font color=red>迭代器模式 (iterator)  </font>
 * <font color=red>状态模式 (status)</font>  

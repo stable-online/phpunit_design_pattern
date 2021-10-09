@@ -27,12 +27,14 @@
             <file>Tests/struct/BridgingTest.php</file>
             <file>Tests/struct/DecoratorTest.php</file>
             <file>Tests/struct/AdapterTest.php</file>
+            <file>Tests/struct/CompositeTest.php</file>
         </testsuite>
         <testsuite name="create_type">
             <file>Tests/create/FactoryTest.php</file>
             <file>Tests/create/BuilderTest.php</file>
             <file>Tests/create/SingletonTest.php</file>
             <file>Tests/create/PrototypeTest.php</file>
+            <file>Tests/create/CompositeTest.php</file>
         </testsuite>
     </testsuites>
     <php>
