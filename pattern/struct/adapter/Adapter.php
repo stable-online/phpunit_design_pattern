@@ -7,6 +7,10 @@
 
 namespace App\struct\adapter;
 
+/**
+ * @Class   Adapter 两个头的插排
+ * @package App\struct\adapter
+ */
 class Adapter
 {
     private TvInterface|RefrigeratorInterface $dianQi;
@@ -22,7 +26,7 @@ class Adapter
     }
 
     /**
-     * @Description:    适配充电
+     * @Description:    适配充电(两个头)
      * @DateTime   :    2021/10/9 11:26 上午
      */
     public function charge(): string
@@ -32,7 +36,7 @@ class Adapter
             return $this->dianQi->chargeInfo1();
         }
 
-        //两个头
+        //三个头
         if ($this->dianQi instanceof TvInterface) {
             return $this->dianQi->chargeInfo2();
         }

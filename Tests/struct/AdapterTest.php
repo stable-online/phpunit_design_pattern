@@ -41,7 +41,7 @@ class AdapterTest extends TestCase
     }
 
     /**
-     * @Description:    测试冰箱适配两个头
+     * @Description:    测试冰箱适配一个头
      * @DateTime   :    2021/10/9 11:11 上午
      */
     public function test_refrigerator_adapter_two()
@@ -49,5 +49,16 @@ class AdapterTest extends TestCase
         $adapter = new Adapter(new Refrigerator());
 
         $this->assertEquals("冰箱已充电",$adapter->charge());
+    }
+
+    /**
+     * @Description:    测试冰箱适配三个头
+     * @DateTime   :    2021/10/9 11:11 上午
+     */
+    public function test_refrigerator_adapter_three()
+    {
+        $adapter = new Adapter(new Tv());
+
+        $this->assertEquals("电视已充电",$adapter->charge());
     }
 }
