@@ -5,7 +5,7 @@
  * @DateTime : 2021/10/9 10:34 上午
  */
 
-namespace App\struct\adapter;
+namespace App\struct\decorator;
 
 interface Drink
 {

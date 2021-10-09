@@ -64,7 +64,7 @@
   - [x] 获取电池battery充电,电量返回100,再次充电返回电池电量99
     </font>
     
-* <font color=red>装饰器模式(Adapter model) </font>  
+* <font color=red>装饰器模式(Decorator model) </font>  
   <font size = 3>一句话需求: 点一杯咖啡,加糖,加冰,计算其总价</font>   
   <font size = 3>  
   验收标准:
@@ -73,7 +73,17 @@
   - [x] 咖啡调用咖啡加糖(0.2元),返回1.2元.
   - [x] 咖啡调用咖啡加糖(0.2元)加冰(0.1元),返回1.3元.
     </font>
-    
+
+* <font color=red>适配器模式(Adapter model) </font>  
+  <font size = 3>一句话需求: 家中墙上只有两个头的插座, 冰箱需要一个头,电视需要三个头,如何连接到家里的墙上</font>   
+  <font size = 3>  
+  验收标准: 
+  - [x] 冰箱正常充电 返回冰箱已充电.
+  - [ ] 电视正常充电 返回电视已充电.
+  - [ ] 冰箱对象插入一个头插座对象,返回冰箱已充电.
+  - [ ] 电视对象插入三个头插座对象,返回电视已充电.
+    </font>    
+
 ## 11种行为型 (behavior type)
 * <font color=red>迭代器模式 (iterator)  </font>
 * <font color=red>状态模式 (status)</font>  

@@ -2,68 +2,28 @@
 /**
  * @className:
  * @User     : zw
- * @DateTime : 2021/10/9 10:29 上午
+ * @DateTime : 2021/10/9 11:08 上午
  */
 
 namespace struct;
 
-
-use App\struct\adapter\Drink;
-use App\struct\adapter\Iced;
-use App\struct\adapter\Office;
-use App\struct\adapter\Sugar;
+use App\struct\adapter\Refrigerator;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @Class   AdapterTest
+ * @package struct
+ */
 class AdapterTest extends TestCase
 {
     /**
-     * @Description:    测试咖啡金额
-     * @DateTime   :    2021/10/9 10:30 上午
+     * @Description:    测试冰箱的充电的信息
+     * @DateTime   :    2021/10/9 11:11 上午
      */
-    public function test_coffee_price()
+    public function test_refrigerator_charge_info()
     {
-        $office = new Office();
+        $refrigerator = new Refrigerator();
 
-        $this->assertEquals(1,$office->price());
+        $this->assertEquals("冰箱已充电",$refrigerator->chargeInfo());
     }
-
-
-    /**
-     * @Description:    测试咖啡加糖的金额
-     * @DateTime   :    2021/10/9 10:35 上午
-     */
-    public function test_coffee_add_sugar_price()
-    {
-        $office = new Sugar(new Office());
-
-        $this->assertEquals(1.1,$office->price());
-    }
-
-    /**
-     * @Description:    测试咖啡加冰的价格
-     * @DateTime   :    2021/10/9 10:41 上午
-     */
-    public function test_coffee_add_iced_price()
-    {
-        $office = new Iced(new Office());
-
-        $this->assertEquals(1.2,$office->price());
-    }
-
-    /**
-     * @Description:    测试咖啡加冰和加糖的价格
-     * @DateTime   :    2021/10/9 10:41 上午
-     */
-    public function test_coffee_add_sugar_iced_price()
-    {
-        /** @var Drink $drink 咖啡*/
-        $drink = new Office();
-
-        $addSugarAtCoffee = new Sugar($drink);
-
-        $addSugarAndIcedAtCoffee = new Iced($addSugarAtCoffee);
-
-        $this->assertEquals(1.3,$addSugarAndIcedAtCoffee->price());
-    }
-
 }

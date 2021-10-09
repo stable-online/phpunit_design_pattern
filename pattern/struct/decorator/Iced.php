@@ -5,7 +5,7 @@
  * @DateTime : 2021/10/9 10:42 上午
  */
 
-namespace App\struct\adapter;
+namespace App\struct\decorator;
 
 
 class Iced implements Drink
