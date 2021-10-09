@@ -25,7 +25,7 @@
         <testsuite name="struct_type">
             <file>Tests/struct/ProxyTest.php</file>
             <file>Tests/struct/BridgingTest.php</file>
-
+            <file>Tests/struct/AdapterTest.php</file>
         </testsuite>
         <testsuite name="create_type">
             <file>Tests/create/FactoryTest.php</file>
