@@ -8,6 +8,7 @@
 namespace struct;
 
 use App\struct\adapter\Refrigerator;
+use App\struct\adapter\Tv;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -26,4 +27,16 @@ class AdapterTest extends TestCase
 
         $this->assertEquals("冰箱已充电",$refrigerator->chargeInfo());
     }
+
+    /**
+     * @Description:    测试冰箱的充电的信息
+     * @DateTime   :    2021/10/9 11:11 上午
+     */
+    public function test_tv_charge_info()
+    {
+        $tv = new Tv();
+
+        $this->assertEquals("电视已充电",$tv->chargeInfo());
+    }
+
 }
